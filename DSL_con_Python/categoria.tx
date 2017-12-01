@@ -1,0 +1,63 @@
+/*
+  Entity DSL grammar.
+*/
+
+EComerce:   
+    tipos+=TipoSimple   
+    filtros+=Filtro      
+    estilos+=Estilo	            
+    categorias+=Categoria      
+;
+
+Estilo:
+    'estilo' name=ID '{'
+	contenidoEstilos=contenidoEstilo
+     '}'	
+;
+
+Categoria:
+    'categoria' name=ID '{'
+       'estilo' estilo=[Estilo] ';'
+        contenidoCategorias+=contenidoCategoria
+    '}'
+;
+
+contenidoCategoria:
+	(filtros+=FiltroSimple|subCategorias+=subCategoria)
+;
+
+subCategoria:
+    'subCategoria' name=[Categoria] ';'
+;
+
+
+FiltroSimple:
+	'filtro' name=[Filtro]';'
+;
+
+Filtro:
+    name=ID 'se filtra por' tipo=[Tipo] ';' 
+;
+
+
+Tipo:
+    TipoSimple | Categoria
+;
+
+
+TipoSimple:
+    'tipo' name=ID ';'
+;
+
+
+
+contenidoEstilo:
+	'Color banner' banner=Caracteristica ';' 
+	'Color letra' letra=Caracteristica ';' 
+;
+
+Caracteristica:
+    name=ID
+;
+
+

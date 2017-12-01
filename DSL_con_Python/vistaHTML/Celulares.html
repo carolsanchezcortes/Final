@@ -1,0 +1,119 @@
+<Html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian Piedrahita, Ediso Penuela, Juan Cubuillos">
+    <title>JSJ</title>
+    <link rel="stylesheet" type="text/css" href="Celulares_estilo.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="../Imagenes/logo.ico">
+  </head>
+  <body>
+	<script type="text/javascript">
+	function Agregar() {
+        alert("Se agregaron los productos al carrito");
+        }
+	
+	
+      function filtroprecio() {
+        alert("Se filtra por precio");
+      }
+    
+
+	
+	</script>
+
+  <header>
+
+    <section id=estilo_tecnologia>
+      <div id="espaciado" style="height:35px"></div>
+      <div id="titulo">
+        <img src="../Imagenes/logo_3.png" > JSJ
+        <div id="espaciado" style="height:5px"> </div>
+      <div id="eslogan" style="font-size:20px; float:right">
+        "Encuentras lo que quieras"
+      </div></div>
+      <div id= "menu">
+        <div id="espaciado" style="height:70px"> </div>
+      		<a href="LG.html" id="menu_inicio">LG</a>
+
+      </div>
+    </section>
+    <div id="espaciado" style="height:10px; background-color:"> </div>
+  </header>
+  <!----------------------------------->
+
+<div id="relleno">
+  <section id="categorias">
+    <div style="margin:15px">
+
+	
+      <label id="filtros" onclick="filtroprecio()">Precio</label>
+	</br>
+	
+	
+  </section >
+
+  <section id="contenedor">
+    <div id="area_productos">
+      <div id="espaciado" style="height:10px; width:auto"> </div>
+
+
+      <!--Primera Fila-->
+      <div id="fila">
+				<div id="div1">
+          <a href="../Imagenes/productos/1.jpg"><img class="imagen" src="../Imagenes/productos/1m.jpg"></a>
+          <div>
+            <b><span id="pro0">Camisa roja</span>:&nbsp;<span id="pre0">100.000</span></b>
+          </div>
+          <div>
+            Hay en stock
+            <span id="uni0">5</span>
+            unidades,<br>
+            
+            <input class="uniBien" id="uniUser0" name="uniUser" value="0" size="4" type="number">
+          </div>
+        </div>
+
+				<div id="div2">
+          <a href="../Imagenes/productos/2.jpg"><img class="imagen" src="../Imagenes/productos/2m.jpg"></a>
+          <div class="etiquetas">
+            <b><span id="pro0">Pantalon Azul</span>:&nbsp;<span id="pre0">350.000</span></b>
+          </div>
+          <div class="stock">
+            Hay en stock
+            <span id="uni0">5</span>
+            unidades,<br>
+           
+            <input class="uniBien" id="uniUser0" name="uniUser" value="0" size="4" type="number">
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <section id="validar">
+    <div id="espaciado" style="height:12px; background-color:"> </div>
+    <button type="button" name="button" onclick="Agregar()"> Agregar al carrito</button>
+  </section>
+
+
+
+  <!----------------------------------->
+    <section id= "contacto">
+      <div>
+        <br>
+        Siguenos en:
+      </div>
+      <div id="iconos">
+        <a href="https://www.facebook.com/"><img src="../Imagenes/face_ico.png" style="margin: 5px;"></a>
+        <a href="https://www.google.com.co/?gfe_rd=cr&ei=G2YiWYqJGNLI8Afsn6WwCw"><img src="../Imagenes/google_ico.png" style="margin: 5px;"></a>
+        <a href="https://es.pinterest.com/"><img src="../Imagenes/pinterest_ico.png" style="margin: 5px;"></a>
+        <a href="https://twitter.com/?lang=es"><img src="../Imagenes/twitter_ico.png" style="margin: 5px;"></a>
+      </div>
+
+    </section>
+  </body>
+</html>
